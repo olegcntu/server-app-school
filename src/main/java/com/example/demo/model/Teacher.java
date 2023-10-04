@@ -14,6 +14,16 @@ public class Teacher {
 
     @Positive(message = "Почасовая ставка учителя должна быть положительным числом")
     private int teacherHourlySalary;
+    private int workTime=0;
+    public int getWorkTime() {
+        return workTime;
+    }
+
+
+    public void setStudents(ArrayList<Student> students) {
+        this.students = students;
+    }
+
 
     private ArrayList<Student> students = new ArrayList<>();
     public String getName() {
