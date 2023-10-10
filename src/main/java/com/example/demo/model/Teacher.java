@@ -6,6 +6,21 @@ import jakarta.validation.constraints.Positive;
 import java.util.ArrayList;
 
 public class Teacher {
+
+    int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setWorkTime(int workTime) {
+        this.workTime = workTime;
+    }
+
     @NotBlank(message = "Имя не может быть пустым")
     private String name;
 

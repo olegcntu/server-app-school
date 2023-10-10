@@ -23,10 +23,12 @@ import java.util.stream.Collectors;
 public class TeacherController {
     @Autowired
     TeacherService teacherService;
-
+    static int count = 1;
 
     @PostMapping("/add-teacher")
     public ResponseEntity<ApiResponse> addTeacher(@Valid @RequestBody Teacher teacher) {
+        teacher.setId(count);
+        count++;
         try {
             boolean added = teacherService.addTeacher(teacher);
             String message = added ? "Учитель успешно добавлен" : "Учитель не может быть добавлен (какая-то ошибка)";

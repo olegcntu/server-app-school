@@ -10,7 +10,6 @@ import java.util.List;
 public class TeacherService {
     private final ArrayList<Teacher> teacherList = new ArrayList<>();
     public boolean addTeacher(Teacher teacher) {
-
         boolean added = teacherList.add(teacher);
         return added;
     }
