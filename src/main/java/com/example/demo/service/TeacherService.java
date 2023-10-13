@@ -18,4 +18,13 @@ public class TeacherService {
         return teacherList;
     }
 
+    public Teacher getTeacherById(int id) {
+        for (Teacher teacher : teacherList) {
+            if (teacher.getId() == id) {
+                return teacher;
+            }
+        }
+        return null;
+    }
+
 }

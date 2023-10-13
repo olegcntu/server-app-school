@@ -47,6 +47,15 @@ public class TeacherController {
         return new ResponseEntity<>(teachers, HttpStatus.OK);
     }
 
+    @GetMapping("/teachers/{id}")
+    public ResponseEntity<Teacher> getTeacherById(@PathVariable("id") Integer id) {
+        Teacher teacher = teacherService.getTeacherById(id);
+        if (teacher != null) {
+            return new ResponseEntity<>(teacher, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 
 }
 
